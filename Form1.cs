@@ -219,5 +219,13 @@ namespace dimaWk
         {
 
         }
+
+        private void voprosiCheck_Click(object sender, EventArgs e)
+        {
+            table = "question";
+            dataGrid.Invalidate();
+            panel.Show();
+            dataLoad();
+        }
     }
 }

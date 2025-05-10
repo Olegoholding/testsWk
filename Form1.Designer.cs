@@ -34,6 +34,7 @@
             this.runTest = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.allResult = new System.Windows.Forms.ToolStripMenuItem();
+            this.lookTest = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.exitBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.help = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,9 +60,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.userEdit = new System.Windows.Forms.TextBox();
             this.panel = new System.Windows.Forms.Panel();
-            this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.lookTest = new System.Windows.Forms.ToolStripMenuItem();
             this.dltBtn = new System.Windows.Forms.Button();
+            this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.voprosiCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.panelUser.SuspendLayout();
@@ -77,7 +78,7 @@
             this.help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(945, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(945, 30);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -88,11 +89,12 @@
             this.runTest,
             this.toolStripSeparator1,
             this.allResult,
+            this.voprosiCheck,
             this.lookTest,
             this.toolStripSeparator2,
             this.exitBtn});
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
-            this.менюToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
+            this.менюToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
             this.менюToolStripMenuItem.Text = "Меню";
             // 
             // createTest
@@ -120,6 +122,13 @@
             this.allResult.Size = new System.Drawing.Size(294, 26);
             this.allResult.Text = "Просмотерть все результаты";
             this.allResult.Click += new System.EventHandler(this.allResult_Click);
+            // 
+            // lookTest
+            // 
+            this.lookTest.Name = "lookTest";
+            this.lookTest.Size = new System.Drawing.Size(294, 26);
+            this.lookTest.Text = "Просмотреть все тесты";
+            this.lookTest.Click += new System.EventHandler(this.lookTest_Click);
             // 
             // toolStripSeparator2
             // 
@@ -368,23 +377,6 @@
             this.panel.TabIndex = 4;
             this.panel.Visible = false;
             // 
-            // dataGrid
-            // 
-            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(11, 6);
-            this.dataGrid.Name = "dataGrid";
-            this.dataGrid.RowHeadersWidth = 51;
-            this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(910, 464);
-            this.dataGrid.TabIndex = 0;
-            // 
-            // lookTest
-            // 
-            this.lookTest.Name = "lookTest";
-            this.lookTest.Size = new System.Drawing.Size(294, 26);
-            this.lookTest.Text = "Просмотреть все тесты";
-            this.lookTest.Click += new System.EventHandler(this.lookTest_Click);
-            // 
             // dltBtn
             // 
             this.dltBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -395,6 +387,23 @@
             this.dltBtn.Text = "Удалить запись";
             this.dltBtn.UseVisualStyleBackColor = true;
             this.dltBtn.Click += new System.EventHandler(this.dltBtn_Click);
+            // 
+            // dataGrid
+            // 
+            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGrid.Location = new System.Drawing.Point(11, 6);
+            this.dataGrid.Name = "dataGrid";
+            this.dataGrid.RowHeadersWidth = 51;
+            this.dataGrid.RowTemplate.Height = 24;
+            this.dataGrid.Size = new System.Drawing.Size(910, 464);
+            this.dataGrid.TabIndex = 0;
+            // 
+            // voprosiCheck
+            // 
+            this.voprosiCheck.Name = "voprosiCheck";
+            this.voprosiCheck.Size = new System.Drawing.Size(294, 26);
+            this.voprosiCheck.Text = "Просмотреть все вопросы";
+            this.voprosiCheck.Click += new System.EventHandler(this.voprosiCheck_Click);
             // 
             // mainForm
             // 
@@ -459,6 +468,7 @@
         private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.ToolStripMenuItem lookTest;
         private System.Windows.Forms.Button dltBtn;
+        private System.Windows.Forms.ToolStripMenuItem voprosiCheck;
     }
 }
 
