@@ -31,6 +31,7 @@ namespace dimaWk
 
             public static string testName;
         }
+        string table;
         public mainForm()
         {
             InitializeComponent();
@@ -139,27 +140,9 @@ namespace dimaWk
         private void allResult_Click(object sender, EventArgs e)
         {
             panel.Show();
-            using (MySqlConnection conn = new MySqlConnection($"{testCreater.getConnStr()}"))
-            {
-                try
-                {
-                    string query = "SELECT * FROM testPassing";
-                    conn.Open();
-                    using (MySqlCommand command = new MySqlCommand(query, conn))
-                    {
-                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
-                        DataTable dataTable = new DataTable();
-                        adapter.Fill(dataTable);
-                        dataGrid.DataSource = dataTable;
-                        dataGrid.AutoGenerateColumns = false;
-                    }
-                    conn.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message, ex.HResult.ToString());
-                }
-            }
+            dataGrid.Invalidate();
+            table = "testPassing";
+            dataLoad();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -171,6 +154,70 @@ namespace dimaWk
         {
             help.help transfer = new help.help();
             transfer.Show();
+        }
+
+        private void dltBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int ID = int.Parse(dataGrid.Rows[dataGrid.CurrentRow.Index].Cells["id"].Value.ToString());
+                using (MySqlConnection connection = new MySqlConnection(testCreater.getConnStr()))
+                {
+                    string query = $"DELETE FROM {table} WHERE id = {ID}";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    try
+                    {
+                        connection.Open();
+                        int rowsAffected = command.ExecuteNonQuery();
+                        dataLoad();
+                    }
+                    catch (Exception ex)
+                    {
+                        dataLoad();
+                        MessageBox.Show($"Ошибка: {ex.Message}");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Ошибка: {ex.Message}");
+            }
+        }
+        private void dataLoad()
+        {
+        using (MySqlConnection conn = new MySqlConnection($"{testCreater.getConnStr()}"))
+            {
+                try
+                {
+                    string query = $"SELECT * FROM {table}";
+                    conn.Open();
+                    using (MySqlCommand command = new MySqlCommand(query, conn))
+                    {
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGrid.DataSource = dataTable;
+                        dataGrid.AutoGenerateColumns = true;
+                    }
+                    conn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, ex.HResult.ToString());
+                }
+            }
+        }
+        private void lookTest_Click(object sender, EventArgs e)
+        {
+            table = "tests";
+            dataGrid.Invalidate();
+            panel.Show();
+            dataLoad();
+        }
+
+        private void mainForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
