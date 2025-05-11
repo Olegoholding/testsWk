@@ -217,7 +217,8 @@ namespace dimaWk
 
         private void mainForm_Load(object sender, EventArgs e)
         {
-
+            back1Btn.Enabled = true;
+            back2Btn.Enabled = true;
         }
 
         private void voprosiCheck_Click(object sender, EventArgs e)
@@ -226,6 +227,13 @@ namespace dimaWk
             dataGrid.Invalidate();
             panel.Show();
             dataLoad();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            panel.Hide();
+            panelUser.Hide();
+            mainPanel.Hide();
         }
     }
 }

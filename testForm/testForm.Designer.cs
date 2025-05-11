@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.flowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.questionLbl = new System.Windows.Forms.Label();
             this.nextBtn = new System.Windows.Forms.Button();
             this.confirmBtn = new System.Windows.Forms.Button();
@@ -42,15 +41,9 @@
             this.questionCount = new System.Windows.Forms.Label();
             this.testName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.flowLayout = new System.Windows.Forms.FlowLayoutPanel();
             this.panel.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // flowLayout
-            // 
-            this.flowLayout.Location = new System.Drawing.Point(13, 91);
-            this.flowLayout.Name = "flowLayout";
-            this.flowLayout.Size = new System.Drawing.Size(925, 400);
-            this.flowLayout.TabIndex = 1;
             // 
             // questionLbl
             // 
@@ -95,7 +88,7 @@
             this.panel.Controls.Add(this.questionCount);
             this.panel.Controls.Add(this.testName);
             this.panel.Controls.Add(this.label1);
-            this.panel.Location = new System.Drawing.Point(3, 13);
+            this.panel.Location = new System.Drawing.Point(12, 12);
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(943, 567);
             this.panel.TabIndex = 7;
@@ -105,7 +98,7 @@
             // 
             this.userLbl.AutoSize = true;
             this.userLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.userLbl.Location = new System.Drawing.Point(27, 386);
+            this.userLbl.Location = new System.Drawing.Point(687, 220);
             this.userLbl.Name = "userLbl";
             this.userLbl.Size = new System.Drawing.Size(95, 32);
             this.userLbl.TabIndex = 8;
@@ -115,7 +108,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label5.Location = new System.Drawing.Point(27, 336);
+            this.label5.Location = new System.Drawing.Point(470, 220);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(211, 32);
             this.label5.TabIndex = 7;
@@ -125,7 +118,7 @@
             // 
             this.markLbl.AutoSize = true;
             this.markLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.markLbl.Location = new System.Drawing.Point(654, 203);
+            this.markLbl.Location = new System.Drawing.Point(829, 279);
             this.markLbl.Name = "markLbl";
             this.markLbl.Size = new System.Drawing.Size(49, 54);
             this.markLbl.TabIndex = 6;
@@ -135,17 +128,17 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(543, 119);
+            this.label3.Location = new System.Drawing.Point(470, 297);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 32);
+            this.label3.Size = new System.Drawing.Size(344, 32);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Оценка:";
+            this.label3.Text = "Оценка за прохождение:";
             // 
             // trueAnswersCount
             // 
             this.trueAnswersCount.AutoSize = true;
             this.trueAnswersCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.trueAnswersCount.Location = new System.Drawing.Point(27, 266);
+            this.trueAnswersCount.Location = new System.Drawing.Point(348, 297);
             this.trueAnswersCount.Name = "trueAnswersCount";
             this.trueAnswersCount.Size = new System.Drawing.Size(95, 32);
             this.trueAnswersCount.TabIndex = 4;
@@ -155,7 +148,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(27, 225);
+            this.label2.Location = new System.Drawing.Point(57, 297);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(297, 32);
             this.label2.TabIndex = 3;
@@ -165,7 +158,7 @@
             // 
             this.questionCount.AutoSize = true;
             this.questionCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.questionCount.Location = new System.Drawing.Point(27, 164);
+            this.questionCount.Location = new System.Drawing.Point(292, 220);
             this.questionCount.Name = "questionCount";
             this.questionCount.Size = new System.Drawing.Size(95, 32);
             this.questionCount.TabIndex = 2;
@@ -185,11 +178,18 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(27, 119);
+            this.label1.Location = new System.Drawing.Point(57, 220);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(229, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Всего вопросов:";
+            // 
+            // flowLayout
+            // 
+            this.flowLayout.Location = new System.Drawing.Point(18, 79);
+            this.flowLayout.Name = "flowLayout";
+            this.flowLayout.Size = new System.Drawing.Size(872, 412);
+            this.flowLayout.TabIndex = 8;
             // 
             // testForm
             // 
@@ -197,10 +197,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(950, 582);
             this.Controls.Add(this.panel);
+            this.Controls.Add(this.flowLayout);
             this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.questionLbl);
-            this.Controls.Add(this.flowLayout);
             this.Name = "testForm";
             this.Text = "Прохождение теста";
             this.Load += new System.EventHandler(this.testForm_Load);
@@ -212,7 +212,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.FlowLayoutPanel flowLayout;
         private System.Windows.Forms.Label questionLbl;
         private System.Windows.Forms.Button nextBtn;
         private System.Windows.Forms.Button confirmBtn;
@@ -226,5 +225,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label userLbl;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.FlowLayoutPanel flowLayout;
     }
 }
