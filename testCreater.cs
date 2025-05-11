@@ -12,7 +12,7 @@ namespace dimaWk
     {
         public static string getConnStr()
         {
-            return $"Server = 95.183.12.18; Port = 3306; Database=dimaBD; user=dima; password=123;";
+            return $"Server = 95.183.12.18; Port = 3306; Database=ervinDB; user=dima; password=123;";
         }
         private string testName = mainForm.testWorkspase.testName;
         private string voprosName = mainForm.testWorkspase.voprosName;
@@ -73,7 +73,7 @@ namespace dimaWk
             }
             else
             {
-                MessageBox.Show($"{idTest.ToString()}");
+                //MessageBox.Show($"{idTest.ToString()}");
             }
         }   
     }
