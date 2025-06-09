@@ -35,7 +35,10 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.allResult = new System.Windows.Forms.ToolStripMenuItem();
             this.lookTest = new System.Windows.Forms.ToolStripMenuItem();
+            this.voprosiCheck = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.войтиToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.exitBtn = new System.Windows.Forms.ToolStripMenuItem();
             this.help = new System.Windows.Forms.ToolStripMenuItem();
             this.mainPanel = new System.Windows.Forms.Panel();
@@ -62,7 +65,7 @@
             this.panel = new System.Windows.Forms.Panel();
             this.dltBtn = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.voprosiCheck = new System.Windows.Forms.ToolStripMenuItem();
+            this.добавитьПользователяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.mainPanel.SuspendLayout();
             this.panelUser.SuspendLayout();
@@ -78,7 +81,7 @@
             this.help});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(945, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(945, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,16 +92,20 @@
             this.runTest,
             this.toolStripSeparator1,
             this.allResult,
-            this.voprosiCheck,
             this.lookTest,
+            this.добавитьПользователяToolStripMenuItem,
+            this.voprosiCheck,
             this.toolStripSeparator2,
+            this.войтиToolStripMenuItem,
+            this.toolStripSeparator3,
             this.exitBtn});
             this.менюToolStripMenuItem.Name = "менюToolStripMenuItem";
-            this.менюToolStripMenuItem.Size = new System.Drawing.Size(65, 26);
+            this.менюToolStripMenuItem.Size = new System.Drawing.Size(65, 24);
             this.менюToolStripMenuItem.Text = "Меню";
             // 
             // createTest
             // 
+            this.createTest.Enabled = false;
             this.createTest.Name = "createTest";
             this.createTest.Size = new System.Drawing.Size(294, 26);
             this.createTest.Text = "Создать тест";
@@ -130,10 +137,30 @@
             this.lookTest.Text = "Просмотреть все тесты";
             this.lookTest.Click += new System.EventHandler(this.lookTest_Click);
             // 
+            // voprosiCheck
+            // 
+            this.voprosiCheck.Enabled = false;
+            this.voprosiCheck.Name = "voprosiCheck";
+            this.voprosiCheck.Size = new System.Drawing.Size(294, 26);
+            this.voprosiCheck.Text = "Просмотреть все вопросы";
+            this.voprosiCheck.Click += new System.EventHandler(this.voprosiCheck_Click);
+            // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
             this.toolStripSeparator2.Size = new System.Drawing.Size(291, 6);
+            // 
+            // войтиToolStripMenuItem
+            // 
+            this.войтиToolStripMenuItem.Name = "войтиToolStripMenuItem";
+            this.войтиToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.войтиToolStripMenuItem.Text = "Войти";
+            this.войтиToolStripMenuItem.Click += new System.EventHandler(this.войтиToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator3
+            // 
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(291, 6);
             // 
             // exitBtn
             // 
@@ -145,7 +172,7 @@
             // help
             // 
             this.help.Name = "help";
-            this.help.Size = new System.Drawing.Size(118, 26);
+            this.help.Size = new System.Drawing.Size(118, 24);
             this.help.Text = "О программе";
             this.help.Click += new System.EventHandler(this.help_Click);
             // 
@@ -398,18 +425,19 @@
             this.dataGrid.Size = new System.Drawing.Size(910, 464);
             this.dataGrid.TabIndex = 0;
             // 
-            // voprosiCheck
+            // добавитьПользователяToolStripMenuItem
             // 
-            this.voprosiCheck.Name = "voprosiCheck";
-            this.voprosiCheck.Size = new System.Drawing.Size(294, 26);
-            this.voprosiCheck.Text = "Просмотреть все вопросы";
-            this.voprosiCheck.Click += new System.EventHandler(this.voprosiCheck_Click);
+            this.добавитьПользователяToolStripMenuItem.Enabled = false;
+            this.добавитьПользователяToolStripMenuItem.Name = "добавитьПользователяToolStripMenuItem";
+            this.добавитьПользователяToolStripMenuItem.Size = new System.Drawing.Size(294, 26);
+            this.добавитьПользователяToolStripMenuItem.Text = "Просмотерть пользователей";
+            this.добавитьПользователяToolStripMenuItem.Click += new System.EventHandler(this.добавитьПользователяToolStripMenuItem_Click);
             // 
             // mainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 567);
+            this.ClientSize = new System.Drawing.Size(945, 570);
             this.Controls.Add(this.panel);
             this.Controls.Add(this.panelUser);
             this.Controls.Add(this.mainPanel);
@@ -469,6 +497,9 @@
         private System.Windows.Forms.ToolStripMenuItem lookTest;
         private System.Windows.Forms.Button dltBtn;
         private System.Windows.Forms.ToolStripMenuItem voprosiCheck;
+        private System.Windows.Forms.ToolStripMenuItem войтиToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
+        private System.Windows.Forms.ToolStripMenuItem добавитьПользователяToolStripMenuItem;
     }
 }
 

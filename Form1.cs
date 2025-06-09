@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using dimaWk.testForm;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -207,7 +208,7 @@ namespace dimaWk
                 }
             }
         }
-        private void lookTest_Click(object sender, EventArgs e)
+        public void lookTest_Click(object sender, EventArgs e)
         {
             table = "tests";
             dataGrid.Invalidate();
@@ -220,9 +221,22 @@ namespace dimaWk
 
         }
 
-        private void voprosiCheck_Click(object sender, EventArgs e)
+        public void voprosiCheck_Click(object sender, EventArgs e)
         {
             table = "question";
+            dataGrid.Invalidate();
+            panel.Show();
+            dataLoad();
+        }
+        private void войтиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            testForm.regLogForm transfer = new regLogForm(this.voprosiCheck, this.createTest, this.добавитьПользователяToolStripMenuItem);
+            transfer.ShowDialog();
+        }
+
+        private void добавитьПользователяToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            table = "user";
             dataGrid.Invalidate();
             panel.Show();
             dataLoad();
