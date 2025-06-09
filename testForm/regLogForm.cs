@@ -60,19 +60,26 @@ namespace dimaWk.testForm
 
         private void auBtn_Click_1(object sender, EventArgs e)
         {
-            if (getDataUser())
+            #region Лубимая валидация
+            if (string.IsNullOrEmpty(passEdit.Text) || string.IsNullOrEmpty(loginEdit.Text))
             {
-                MessageBox.Show("Авторизация прошла успешно");
-                voprosiCheck.Enabled = true;
-                testCreate.Enabled = true;
-                truePrikol.Enabled = true;
-
-                this.Close();
+                MessageBox.Show("Заполните поля для данных");
+                return;
             }
-            else
+
+            if (!getDataUser())
             {
                 MessageBox.Show("Авторизация прошла не успешно, зарегистрируйтесь у администратора");
+                return;
             }
+            #endregion
+
+            MessageBox.Show("Авторизация прошла успешно");
+            voprosiCheck.Enabled = true;
+            testCreate.Enabled = true;
+            truePrikol.Enabled = true;
+
+            this.Close();
         }
     }
 }
