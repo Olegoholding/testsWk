@@ -12,7 +12,7 @@ namespace dimaWk
     {
         public static string getConnStr()
         {
-            return $"Server = 95.183.12.18; Port = 3306; Database=ervinDB; user=dima; password=123;";
+            return $"Server = 95.183.12.18; Port = 3306; Database=ervinDB; user=dima; password=somepassword666;";
         }
         private string testName = mainForm.testWorkspase.testName;
         private string voprosName = mainForm.testWorkspase.voprosName;

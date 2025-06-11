@@ -219,6 +219,7 @@ namespace dimaWk
         {
             back1Btn.Enabled = true;
             back2Btn.Enabled = true;
+            button5.Enabled = true;
         }
 
         private void voprosiCheck_Click(object sender, EventArgs e)
@@ -234,6 +235,12 @@ namespace dimaWk
             panel.Hide();
             panelUser.Hide();
             mainPanel.Hide();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            testForm.logPage transfer = new testForm.logPage(this.button1, this.button4);
+            transfer.ShowDialog();
         }
     }
 }
